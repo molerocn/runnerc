@@ -1,37 +1,49 @@
 fileFormatVersion: 2
-guid: 7773119c6471b9c6684604e08114befc
+guid: 966b1b1000435376bac67b042f8c6f2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4312366431063467818
-    second: Jumping_0
+      213: -4980158165618916464
+    second: Swimming_0
   - first:
-      213: -4048530547193403679
-    second: Jumping_1
+      213: 8751027384873743284
+    second: Swimming_1
   - first:
-      213: 2826979704478040783
-    second: Jumping_2
+      213: -4930324298276872730
+    second: Swimming_2
   - first:
-      213: 5907000883226147584
-    second: Jumping_3
+      213: 2252529693268281113
+    second: Swimming_3
   - first:
-      213: -6258145227301590787
-    second: Jumping_4
+      213: 8799553691358116304
+    second: Swimming_4
   - first:
-      213: 722731012742800968
-    second: Jumping_5
+      213: 5007987827638646515
+    second: Swimming_5
   - first:
-      213: 613896819931920705
-    second: Jumping_6
+      213: 3226847894532240451
+    second: Swimming_6
   - first:
-      213: -9125459030462519034
-    second: Jumping_7
+      213: -4782507935983400230
+    second: Swimming_7
   - first:
-      213: -4537684021541712226
-    second: Jumping_8
+      213: 8873954347459310934
+    second: Swimming_8
   - first:
-      213: -5426529818256287668
-    second: Jumping_9
+      213: -217732247090789224
+    second: Swimming_9
+  - first:
+      213: -5953667396260206799
+    second: Swimming_10
+  - first:
+      213: 3525361786575140882
+    second: Swimming_11
+  - first:
+      213: -4555564519611058340
+    second: Swimming_12
+  - first:
+      213: -3928470431231461953
+    second: Swimming_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,7 +152,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jumping_0
+      name: Swimming_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d8942f24956724c0800000000000000
-      internalID: -4312366431063467818
+      spriteID: 093060dc88ce2eab0800000000000000
+      internalID: -4980158165618916464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_1
+      name: Swimming_1
       rect:
         serializedVersion: 2
         x: 128
@@ -177,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e62838daeab0d7c0800000000000000
-      internalID: -4048530547193403679
+      spriteID: 4b37d17aa05e17970800000000000000
+      internalID: 8751027384873743284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_2
+      name: Swimming_2
       rect:
         serializedVersion: 2
         x: 256
@@ -199,14 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc207a030137b3720800000000000000
-      internalID: 2826979704478040783
+      spriteID: 6eddab53c28f39bb0800000000000000
+      internalID: -4930324298276872730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_3
+      name: Swimming_3
       rect:
         serializedVersion: 2
         x: 384
@@ -221,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00bfc94b102e9f150800000000000000
-      internalID: 5907000883226147584
+      spriteID: 917864552d7924f10800000000000000
+      internalID: 2252529693268281113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_4
+      name: Swimming_4
       rect:
         serializedVersion: 2
         x: 512
@@ -243,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df8e1e5a21a9629a0800000000000000
-      internalID: -6258145227301590787
+      spriteID: 0d9b063d57b4e1a70800000000000000
+      internalID: 8799553691358116304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_5
+      name: Swimming_5
       rect:
         serializedVersion: 2
         x: 640
@@ -265,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84661b2e608a70a00800000000000000
-      internalID: 722731012742800968
+      spriteID: 3f6b1e15562ff7540800000000000000
+      internalID: 5007987827638646515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_6
+      name: Swimming_6
       rect:
         serializedVersion: 2
         x: 768
@@ -287,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 149b8c8b7eff48800800000000000000
-      internalID: 613896819931920705
+      spriteID: 344bfc1401118cc20800000000000000
+      internalID: 3226847894532240451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_7
+      name: Swimming_7
       rect:
         serializedVersion: 2
         x: 896
@@ -309,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 609a6ec4c5bdb5180800000000000000
-      internalID: -9125459030462519034
+      spriteID: ada093cfe5e11adb0800000000000000
+      internalID: -4782507935983400230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_8
+      name: Swimming_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -331,14 +343,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9e4a019c68e601c0800000000000000
-      internalID: -4537684021541712226
+      spriteID: 6557859767e962b70800000000000000
+      internalID: 8873954347459310934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumping_9
+      name: Swimming_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -353,8 +365,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c48d4cb91e711b4b0800000000000000
-      internalID: -5426529818256287668
+      spriteID: 8948104cca57afcf0800000000000000
+      internalID: -217732247090789224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swimming_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137e5170c03506da0800000000000000
+      internalID: -5953667396260206799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swimming_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2183c81edd99ce030800000000000000
+      internalID: 3525361786575140882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swimming_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57b531b43267c0c0800000000000000
+      internalID: -4555564519611058340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swimming_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5b2dbe4f44b79c0800000000000000
+      internalID: -3928470431231461953
       vertices: []
       indices: 
       edges: []
@@ -363,7 +463,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e93eda0cc7dc1068cb8c0bb5005ed34c
+    spriteID: 3afe328db4fed012ba16f3fc15f64749
     internalID: 0
     vertices: []
     indices: 
@@ -373,18 +473,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":14.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Jumping_0: -4312366431063467818
-      Jumping_1: -4048530547193403679
-      Jumping_2: 2826979704478040783
-      Jumping_3: 5907000883226147584
-      Jumping_4: -6258145227301590787
-      Jumping_5: 722731012742800968
-      Jumping_6: 613896819931920705
-      Jumping_7: -9125459030462519034
-      Jumping_8: -4537684021541712226
-      Jumping_9: -5426529818256287668
+      Swimming_0: -4980158165618916464
+      Swimming_1: 8751027384873743284
+      Swimming_10: -5953667396260206799
+      Swimming_11: 3525361786575140882
+      Swimming_12: -4555564519611058340
+      Swimming_13: -3928470431231461953
+      Swimming_2: -4930324298276872730
+      Swimming_3: 2252529693268281113
+      Swimming_4: 8799553691358116304
+      Swimming_5: 5007987827638646515
+      Swimming_6: 3226847894532240451
+      Swimming_7: -4782507935983400230
+      Swimming_8: 8873954347459310934
+      Swimming_9: -217732247090789224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
