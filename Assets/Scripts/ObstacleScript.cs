@@ -1,9 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstacleScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject startPoint;
     public GameObject player;
     void Start()
     {
@@ -20,7 +20,7 @@ public class ObstacleScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player.transform.position = startPoint.transform.position;
+            SceneManager.LoadScene("ForestScene");
         }
     }
 }

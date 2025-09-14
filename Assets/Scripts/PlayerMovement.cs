@@ -8,7 +8,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     public bool isJumping;
-    private bool isInLobby = true;
+    public bool isOnIdleState;
+
+    // TODO: preguntar al profe si es mejor un flag o simplemente hacer la
+    // verificacion de la escena con el SceneManager
+    public bool isUnderWaterScene;
 
     void Start()
     {
@@ -17,24 +21,51 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!isInLobby)
+        if (isUnderWaterScene)
         {
+            // TODO: mejorar la acción de nadar hacia arriba porque no se ve
+            // natural.
             rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
-        }
-        if (Input.GetButtonDown("Jump") && !isJumping)
-        {
-            if (isInLobby)
-            {
-                isInLobby = false;
-                animator.SetBool("isInLobby", false);
-            }
-            else
+            animator.SetBool("isSwimming", true);
+            if (Input.GetButtonDown("Jump"))
             {
                 rb.AddForce(new Vector2(rb.linearVelocityX, jump));
             }
         }
+        else
+        {
+            if (!isOnIdleState)
+            {
+                /*
+                Simplemente correr cuando el evento de idle no esta activo, es decir
+                no estoy en la lobby
+                */
+                animator.SetBool("isInLobby", false);
+                rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
+            }
+            if (isJumping)
+            {
+                // Animacion de cayendo en la escena de cave.
+                animator.SetBool("isJumping", true);
+            }
+            if (Input.GetButtonDown("Jump") && !isJumping)
+            {
+                if (isOnIdleState)
+                {
+                    // Comenzar el juego con la accion de saltar
+                    isOnIdleState = false;
+                    animator.SetBool("isInLobby", false);
+                }
+                else
+                {
+                    // Simple salto, boring
+                    rb.AddForce(new Vector2(rb.linearVelocityX, jump));
+                }
+            }
+        }
     }
 
+    // mecanica de salto con un simple ground check
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))

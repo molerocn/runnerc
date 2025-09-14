@@ -5,23 +5,16 @@ public class PortalScript : MonoBehaviour
 {
     public enum Scene
     {
-        main,
-        under,
-        heaven
-    }
-    public Scene scene = Scene.main;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
+        forest,
+        cave,
+        underwater
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public Scene scene = Scene.forest;
 
-    }
+    void Start() { }
+
+    void Update() { }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -29,14 +22,14 @@ public class PortalScript : MonoBehaviour
         {
             switch (scene)
             {
-                case Scene.main:
-                    SceneManager.LoadScene("MainScene");
+                case Scene.forest:
+                    SceneManager.LoadScene("ForestScene");
                     break;
-                case Scene.under:
-                    SceneManager.LoadScene("UnderScene");
+                case Scene.cave:
+                    SceneManager.LoadScene("CaveScene");
                     break;
-                case Scene.heaven:
-                    SceneManager.LoadScene("HeavenScene");
+                case Scene.underwater:
+                    SceneManager.LoadScene("UnderWaterScene");
                     break;
                 default: break;
             }

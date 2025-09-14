@@ -13,6 +13,10 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, -10);
+        // Debug.Log(player.transform.position.x);
+        if (player.transform.position.x > 0)
+        {
+            transform.position = new Vector3(player.transform.position.x, transform.position.y, -10);
+        }
     }
 }

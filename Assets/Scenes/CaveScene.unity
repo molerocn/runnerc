@@ -602,13 +602,21 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 1250912291584109015, guid: 156346bf2ee85072c92831ff718c9507, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: -7242443438495481712, guid: 156346bf2ee85072c92831ff718c9507, type: 3}
+      propertyPath: isJumping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7242443438495481712, guid: 156346bf2ee85072c92831ff718c9507, type: 3}
+      propertyPath: isOnIdleState
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1250912291584109015, guid: 156346bf2ee85072c92831ff718c9507, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250912291584109015, guid: 156346bf2ee85072c92831ff718c9507, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.83
       objectReference: {fileID: 0}
     - target: {fileID: 1250912291584109015, guid: 156346bf2ee85072c92831ff718c9507, type: 3}
       propertyPath: m_LocalPosition.z

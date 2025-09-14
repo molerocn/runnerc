@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ForestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/CaveScene.unity
+    guid: f1975a960e40ff834adf88aba7695a47
+  - enabled: 1
     path: Assets/Scenes/UnderWaterScene.unity
     guid: 188943c1e135a99ba8f8c5bbd8d815fb
   m_configObjects:
