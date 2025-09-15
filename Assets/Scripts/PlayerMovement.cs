@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    public float jump;
-    public Animator animator;
 
     private Rigidbody2D rb;
+
+    private bool upKeyAction;
+    private bool downKeyAction;
+
+    public float speed;
+    public float jump;
+    public float swimMovementAmount;
+    public Animator animator;
     public bool isJumping;
     public bool isOnIdleState;
 
@@ -21,50 +26,67 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isUnderWaterScene)
+        upKeyAction = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow);
+        downKeyAction = Input.GetKeyDown(KeyCode.DownArrow);
+        if (!isUnderWaterScene)
         {
-            // TODO: mejorar la acción de nadar hacia arriba porque no se ve
-            // natural.
-            rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
-            animator.SetBool("isSwimming", true);
-            if (Input.GetButtonDown("Jump"))
-            {
-                rb.AddForce(new Vector2(rb.linearVelocityX, jump));
-            }
+            runnerMechanics();
         }
         else
         {
-            if (!isOnIdleState)
+            swimmingMechanics();
+        }
+    }
+
+    private void swimmingMechanics()
+    {
+        // TODO: mejorar la acción de nadar hacia arriba porque no se ve
+        // natural.
+        rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
+        rb.gravityScale = 0f;
+        animator.SetBool("isSwimming", true);
+        if (upKeyAction)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, swimMovementAmount);
+        }
+        else if (downKeyAction)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, -swimMovementAmount);
+        }
+    }
+
+    private void runnerMechanics()
+    {
+        rb.gravityScale = 1f;
+        if (!isOnIdleState)
+        {
+            // correr cuando no estoy en idle
+            animator.SetBool("isInLobby", false);
+            rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
+        }
+        if (isJumping)
+        {
+            // Animacion de cayendo en la escena de cave.
+            animator.SetBool("isJumping", true);
+        }
+        if (upKeyAction && !isJumping)
+        {
+            if (isOnIdleState)
             {
-                /*
-                Simplemente correr cuando el evento de idle no esta activo, es decir
-                no estoy en la lobby
-                */
+                // Comenzar el juego con la accion de saltar
+                isOnIdleState = false;
                 animator.SetBool("isInLobby", false);
-                rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
             }
-            if (isJumping)
+            else
             {
-                // Animacion de cayendo en la escena de cave.
-                animator.SetBool("isJumping", true);
-            }
-            if (Input.GetButtonDown("Jump") && !isJumping)
-            {
-                if (isOnIdleState)
-                {
-                    // Comenzar el juego con la accion de saltar
-                    isOnIdleState = false;
-                    animator.SetBool("isInLobby", false);
-                }
-                else
-                {
-                    // Simple salto, boring
-                    rb.AddForce(new Vector2(rb.linearVelocityX, jump));
-                }
+                // Simple salto, boring
+                rb.AddForce(new Vector2(rb.linearVelocityX, jump));
             }
         }
     }
 
+    // -------------------------------------------------
+    // override functions
     // mecanica de salto con un simple ground check
     private void OnCollisionEnter2D(Collision2D collision)
     {
