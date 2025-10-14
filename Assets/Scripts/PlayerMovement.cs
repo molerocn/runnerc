@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,9 +16,14 @@ public class PlayerMovement : MonoBehaviour
     public bool isJumping;
     public bool isOnIdleState;
 
-    // TODO: preguntar al profe si es mejor un flag o simplemente hacer la
-    // verificacion de la escena con el SceneManager
-    public bool isUnderWaterScene;
+    private float timer = 0f;
+
+    private bool isUnderWaterScene;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -26,8 +32,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("isunderwater: " + isUnderWaterScene);
+        isUnderWaterScene = SceneManager.GetActiveScene().name == "UnderWater";
         upKeyAction = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow);
         downKeyAction = Input.GetKeyDown(KeyCode.DownArrow);
+        if (!isOnIdleState)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= 0.5f)
+            {
+                GameManager.Instance.AddScore(1);
+                timer = 0f;
+            }
+        }
         if (!isUnderWaterScene)
         {
             runnerMechanics();
@@ -64,9 +82,9 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isInLobby", false);
             rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
         }
+        // statement unicamente para la animacion de cayendo en la escena de cave.
         if (isJumping)
         {
-            // Animacion de cayendo en la escena de cave.
             animator.SetBool("isJumping", true);
         }
         if (upKeyAction && !isJumping)

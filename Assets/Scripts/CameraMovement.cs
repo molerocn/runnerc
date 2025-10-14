@@ -5,6 +5,12 @@ public class CameraMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject player;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+
     void Start()
     {
         
@@ -14,9 +20,9 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         // Debug.Log(player.transform.position.x);
-        if (player.transform.position.x > 0)
-        {
-            transform.position = new Vector3(player.transform.position.x, transform.position.y, -10);
-        }
+        // if (player.transform.position.x > 0)
+        // {
+        transform.position = new Vector3(player.transform.position.x + 4, transform.position.y, -10);
+        // }
     }
 }
