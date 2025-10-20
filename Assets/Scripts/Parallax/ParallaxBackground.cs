@@ -6,16 +6,24 @@ public class ParallaxBackground : MonoBehaviour
 {
     public ParallaxCamera parallaxCamera;
     List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
- 
+
     void Start()
     {
         if (parallaxCamera == null)
-            parallaxCamera = Camera.main.GetComponent<ParallaxCamera>();
- 
+            parallaxCamera = ParallaxCamera.Instance;
+
         if (parallaxCamera != null)
             parallaxCamera.onCameraTranslate += Move;
- 
+
         SetLayers();
+    }
+
+    private void OnDestroy()
+    {
+        if (parallaxCamera != null)
+        {
+            parallaxCamera.onCameraTranslate -= Move;
+        }
     }
  
     void SetLayers()

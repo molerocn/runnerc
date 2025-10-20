@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
-
     public int score;
+    public static GameManager Instance;
 
     void Awake()
     {
@@ -21,5 +20,12 @@ public class GameManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+    }
+
+    // metodo usado desde el script de player
+    public void OnPlayerDeath()
+    {
+        Debug.Log("end end end");
+        Time.timeScale = 0f;
     }
 }

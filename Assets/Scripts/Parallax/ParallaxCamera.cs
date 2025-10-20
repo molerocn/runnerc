@@ -5,8 +5,23 @@ public class ParallaxCamera : MonoBehaviour
 {
     public delegate void ParallaxCameraDelegate(float deltaMovement);
     public ParallaxCameraDelegate onCameraTranslate;
+    public static ParallaxCamera Instance;
  
     private float oldPosition;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+
  
     void Start()
     {
@@ -15,6 +30,7 @@ public class ParallaxCamera : MonoBehaviour
  
     void Update()
     {
+        Debug.Log("ParallaxCamera Update");
         if (transform.position.x != oldPosition)
         {
             if (onCameraTranslate != null)
